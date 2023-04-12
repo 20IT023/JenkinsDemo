@@ -87,7 +87,7 @@ pipeline {
                     def dockerRestart = 'sudo service docker restart'
                     def dockerRunCmd = "sudo docker run -p 8080:8080 -d 20it023/spring-boot:${IMAGE_NAME}"
                   sshagent(['ec2-prod']) {
-                        sh "ssh -o StrictHostKeyChecking=no ec2-user@54.237.0.178 ${dockerRunCmd}"
+                        sh "ssh -o StrictHostKeyChecking=no ec2-user@107.22.157.40 ${dockerRunCmd}"
                     }  
                 }
             }
