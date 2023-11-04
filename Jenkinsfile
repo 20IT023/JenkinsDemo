@@ -96,7 +96,7 @@ pipeline {
     }
     post{
         always{
-            echo 'Executing always...'
+            echo 'Executing always... changing'
         }
         success{
             echo 'Executing success'
